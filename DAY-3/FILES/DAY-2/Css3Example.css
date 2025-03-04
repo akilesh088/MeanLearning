@@ -1,0 +1,153 @@
+h1{
+    color:midnightblue;
+    background-color:whitesmoke;
+    text-align: center;
+    font-size: xx-large;
+    border: 5px solid;
+    border-color:green;
+    padding: 15px;
+    margin: 15px;
+    
+}
+#div{
+    border: 5px solid;
+    border-color: snow;
+    margin: 15px;
+    text-align: center;
+    color: white;
+}
+body{
+    margin: 25px;
+    border: 5px solid;
+    border-color: brown;
+    background-image: url();
+    font-family:'Delius Unicase' ;
+}
+@media(max-width:1000px){
+    body{
+        background-color:white;
+        color: gray;
+    }
+    
+}
+@media(min-width:500px){
+    body{
+        background-color:black;
+    }
+}
+
+#a{
+    color: hotpink;
+    text-align: center;
+    border: 5px solid;
+    background-color: white;
+    margin: 15px;
+    
+}
+.Myclass{
+    text-align: center;
+    border: 5px solid;
+    border-color: aqua;
+    margin: 15px;
+
+}
+.Boxmodel{
+    text-align: center;
+    color:cadetblue;
+    padding: 25px;
+    border: 5px solid;
+    color:lightslategray;
+    margin: 50px;
+
+}
+.flex{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+
+input[type="text"]{
+    border: 5px solid;
+}
+input[type="number"]{
+    border-radius: 25px ;
+}
+p[title~="HELLO"]{
+    color: yellow;
+}
+p[lang|="en"]{
+    color: red;
+}
+a[href^="https"]{
+    color: orange;
+}
+a[href$=".com"]{
+    color:greenyellow;
+}
+p[title*="HELLOis"]{
+    color: gold;
+}
+
+
+.Pseudo{
+    #button:hover{
+        background-color: brown;
+        color: blue;
+    }
+    #input:focus{
+        size: 10;
+        background-color: darkmagenta;
+    }
+}
+
+
+.PseudoElement{
+    font-size: xx-large;
+
+    
+    h4::after{
+        content: "END!";
+        color: brown;
+    }
+    h4::before{
+        content: "HELLO!";
+        color: blue;
+    }
+    
+    p::first-letter{
+        font-size:small;
+        color: crimson;
+    }
+    p::first-line{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    
+}
+.Groupcombining{
+    .a,p{
+        color:orange;
+    }
+    
+    .b p{
+        color:yellow;
+    }
+    
+}
+.font{
+    .q{font-size: 12px;}
+    .w{font-size: 10px;}
+    .e{font-size: 30px;}
+    .r{font-size: 1.5em;}
+}
+.weight{
+    .a{font-weight: 100;}
+    .b{font-weight: 500;}
+    .c{font-weight: bolder;}
+    .d{font-weight: 900;}
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY website</title>
+</head>
+
+<body style="text-align: center; color:white;" bgcolor="grey">
+    <header >
+        <h1>This is my first simple website</h1>
+        <nav>
+            <ul>
+                <ul><a href="#">HOME</a></ul>
+                <ul><a href="/DAY-1/About.html">ABOUT</a></ul>
+            
+            </ul>
+        </nav>
+    </header>
+    
+
+<!--
+
+
+    <section>
+        <article>
+            <h1>Introduction to HTML</h1>
+            <p>This is not my first learning session.</p>
+        </article>
+
+    </section>
+
+    <section>
+        <form>
+            <ul>
+                <label for="email" >Email:</label>
+                <input type="email" id="email" required placeholder="Enter your Email">
+            </ul>
+            <ul>
+                <label for="date">DOB:</label>
+                <input type="date" id="DOB" placeholder="DOB">
+            </ul>
+            <ul>
+                <label for="url">Url:</label>
+                <input type="url" id="url" placeholder="Website" required>
+            </ul>
+            <ul>
+                <label for="tel">Telephone:</label>
+                <input type="tel" id="tel" placeholder="Telephone Number" required pattern="[0-9]{10}">
+            </ul>
+            <ul>
+                <label for="Number">Numbers:</label>
+                <input type="number" id="Number" placeholder="Number" required min="0" max="150">
+            </ul>
+            <ul>
+                <label for="range">Range:</label>
+                <input type="range" min="50" max="150" id="range" placeholder="range" required>
+            </ul>
+            <ul>
+                <label for="Date">Date:</label>
+                <input type="date" id="Date">
+            </ul>
+            <ul>
+                <label for="Time">Time:</label>
+                <input type="time" id="Time">
+            </ul>          
+            <ul>
+                <label for="DateTime">Date & Time:</label>
+                <input type="datetime-local" id="DateTime">
+            </ul>
+            <ul>
+                <label for="Month">Month:</label>
+                <input type="month" id="Month">
+            </ul>
+            <ul>
+                <label for="week">Week:</label>
+                <input type="week" id="week">
+            </ul>   
+            <ul>
+                <label for="Search">Search:</label>
+                <input type="search" id="Search"placeholder="Search">
+            </ul>
+            <ul>
+                <label for="Color">Choose Color:</label>
+                <input type="color" id="Color"placeholder="Search">
+            </ul>
+            <ul>
+                <label for="progress">Progress:</label>
+                <progress id="progress" value="80" max="100"></progress>
+            </ul>
+            <ul>
+                <lable for="battery">Battery level:</lable>
+                <meter id="battery" min="0" max="100" value="85" low="15" high="90"></meter>
+            </ul>
+              
+                <input type="submit" id="submit">
+        </form>
+
+        <form>
+            <input list="Movies" name="Movies" placeholder="Search for Movies">
+            <datalist id="Movies">
+                <option value="Oh My kadavule"></option>
+                <option value="Mankatha"></option>
+                <option value="Ps-1"></option>
+                <option value="Ps-2"></option>
+                <option value="Dragon"></option>
+                <option value="Love Today"></option>
+            </datalist>
+        </form>
+    </section>
+
+    <section>
+        <h1>Our Services</h1>
+        <p>We develop websites and web applications</p>
+    </section>
+
+    <article>
+        <h2>Update</h2>
+        <p> We develop using HTML5</p>
+    </article>
+
+    <aside>
+        <h3>Aside Section</h3>
+        <p>Used to show you advertisements</p>
+    </aside>
+
+    <canvas id="Mycanvas" width="400" height="200" ></canvas>
+    <script>
+        var canvas=document.getElementById("Mycanvas");
+        var ctx=canvas.getContext("2d");
+        ctx.fillStyle="blue";
+        ctx.fillRect(50,50,100,100);
+    </script>
+
+    
+        <svg width="150" height="150">
+        <circle cx="55" cy="55" r="50" stroke="brown" stroke-width="5" fill="white";></circle>
+    </svg>
+
+    <section>
+    <details>
+        <summary > MORE INFO</summary>
+        <p>you can view extra detail here</p>
+    </details>
+    
+    </section>
+
+    <label id="multiple">Multiplication:</label>
+    <form id="multiple" oninput="result.value=parseInt(a.value)*parseInt(b.value);">
+        <input type="number" id="a" >  *  <input type="number" name="b" id="30">=
+        <output name="result"></output>
+    </form>
+
+    <label id="division">Division:</label>
+    <form id="division" oninput="result.value=parseFloat(a.value)/parseFloat(b.value);">
+        <input type="number" id="a" >   /   <input type="number" name="b" id="30">=
+        <output name="result"></output>
+    </form>
+
+    <label id="add">Addition:</label>
+    <form id="add" oninput="result.value=parseInt(a.value)+parseInt(b.value);">
+        <input type="number" id="a" >  +  <input type="number" name="b" id="30">=
+        <output name="result"></output>
+    </form>
+
+
+    <main>
+        <h1>Main heading</h1>
+        <p>This section only contains the importamt documents of the website.No header,footer and side bars</p>
+        <p>This paragraph tells how a<mark> Mark tag</mark> Works.
+        This tag <mark>Highlight</mark> the text.</p>
+    </main>
+
+
+    <figure >
+        <h3>A Beautifull sunset</h3>
+        <video controls width="500">
+            <source src="Files/video1.mp4" type="video/mp4">
+            <track src="Files/Example.vtt" kind="captions" srclang="en" label="English" >
+            <source src="Files/sample-ogg-files-sample1.ogg" type="video/">
+        </video>
+
+        <img src="Files/gtr1.jfif" alt="GT R-35 car" width="500" height="350">
+        <figcaption>A blue GT-R 35</figcaption>
+        <h3>Audio section</h3>
+        <audio controls>
+            <source src="Files/Audio.mp3" type="audio/mpeg">
+        </audio>
+    </figure>
+
+    <p>We can Specify time using time tag. For Example<time datetime="2025-02-26"> Feburary 25,2025</time></p>
+
+
+    <ul><a href="/DAY-1/About.html">ABOUT</a></ul>
+    <ul></ul><a href="mailto:info@example.com">info@example.com</a>
+    <ul></ul><a href="tel+:1234567890">Call Us</a>
+    <ul></ul><a href="www.google.com" target="_blank">Opens in a new tab</a>
+    <ul><a href="https://www.google.com">
+        <img src="Files/gtr.jfif" alt="example image">
+    </a></ul>
+    <ul><a href="Files/gtr1.jfif" download>Download</a></ul>
+
+
+    <h2>Tab Index</h2>
+    <a href="#" tabindex="3">Link 3</a>
+    <a href="#" tabindex="2">Link 2</a>
+    <a href="#" tabindex="1">Link 1</a>
+    <input type="text" tabindex="4" placeholder="text">
+    
+
+    <h2>Custom Tab Index. (change tab index value)</h2>
+    <input type="text" tabindex="-1" placeholder="Fname">
+    <input type="text" tabindex="2" placeholder="Mname">
+    <input type="text" tabindex="1" placeholder="Lname">
+    <button tabindex="3">Submit</button>
+    
+
+    <h2>non focusable tab index</h2>
+    <p tabindex="1"> para 1</p>
+    <div tabindex="2"><p>division 2</p></div>
+    <section tabindex="3"><p> section 3</section>
+
+        
+
+        <h2>Dynamic focusable tab index "0"</h2>
+    <p tabindex="0"> paragraph 1</p>
+    <div tabindex="2"><p>division 2</p></div>
+    <section tabindex="3"><p> section 3</section>
+
+        -->
+
+        <h2>Access Key </h2>
+        <li><a href="#Home" accesskey="h">Home Alt+h</a></li>
+        <li><a href="/DAY-1/About.html" accesskey="a">About Alt+a</a></li>
+
+
+
+    <footer>
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: oblique;">Copyrights &copy; My Site:FEB-2025</h3>
+        <address>
+            Contact us at:<a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </footer>
+    
+</body>
+</html>
