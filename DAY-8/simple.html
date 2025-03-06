@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #box{
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+        }
+        .div{
+            border: 2px solid black;
+            width: 350px;
+            .error{
+                color: blue;
+            }
+        }
+        #formvalidation{
+            border:2px;
+            border-color: black solid;
+            input{
+                float: right;
+            }
+        }
+    </style>
+    <script src="javascript.js"></script>
+    <script src="form.js"></script>
+    
+
+   
+    
+</head>
+<body><!-- 
+    <h1>Change image on clicking:</h1>
+    <img width="200" id="img" src="Files\pexels-pixabay-220769.jpg" alt="image">
+    <br>
+
+    <button onclick="changeMe()" >Click to change</button>
+    <br>
+    <br>
+
+    <a href="#" target="_blank" id="link" onclick="changeMe()">Change website</a>
+    <br>
+
+    <h1>Add a paragraph:</h1>
+    <button  onclick="addElement()">Add Paragraph</button>
+    <button onclick="removeElement()">Remove paragraph</button>
+    <div id="container"></div>
+    <br>
+    
+    <div id="box">
+        <h1>Font Size</h1>
+        <h2>Font family</h2> 
+    </div>
+    <button onclick="change()">Change color</button>
+    <br>
+    <br>
+    <input type="text" id="input" placeholder="Enter your name...">
+    <button onclick="displayMessage()">Submit</button>
+    <p id="msg"></p>
+ -->
+    <h2>Registration Form</h2>
+    <div class="div">
+        <form action="" id="formvalidation">
+            
+            <label for="n">Name</label>
+            <input type="text" name="n" id="n" placeholder="Enter Your Name">
+            <span class="error" id="nameError"></span>
+            <br><br>
+     
+            <label for="e">Email</label>
+            <input type="text" name="e" id="e" placeholder="Enter Your Email">
+            <span class="error" id="emailError"></span>
+            <br><br>
+     
+            <label for="p">Password</label>
+            <input type="password" name="p" id="p" placeholder="Enter Password">
+            <span class="error" id="passwordError"></span>
+            <br><br>
+     
+            <label for="rp">Confirm Password</label>
+            <input type="password" name="rp" id="rp" placeholder="Re-enter Password">
+            <span class="error" id="confirmPasswordError"></span>
+            <br><br>
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I agree to the terms and conditions</label>
+            <br><br>
+            <input type="radio" id="ra" name="radio">
+            <label for="radio">I agree to the terms and conditions</label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>    
+</body>
+</html>  
