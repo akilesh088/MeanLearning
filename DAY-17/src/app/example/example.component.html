@@ -1,0 +1,37 @@
+
+<div class="container-fluid ">
+    <h1>Data Binding</h1>
+    <h2>Interpolation Binding </h2>
+    <p>{{message}}</p>  
+    <br>
+    
+    <h2>Property Binding</h2>
+    <img width="150px" height="150px" class="img-fluid" [src]="imageUrl" alt="logo">
+    <br>
+    
+    <h2>Event Binding</h2>
+    <button (click)="increment();" class="btn btn-secondary text-white">Count +</button><br>
+    <button (click)="decrement();" class="btn btn-secondary text-white">Count -</button>
+    <p>{{count}}</p>
+    <br>
+    
+    <h2>Two-Way Binding</h2>
+    <input [(ngModel)]="username" placeholder="Enter name ...">
+    <p>Welcome {{username}}!</p>
+    <br>
+    
+    <h2>Attribute Binding</h2>
+    <table [attr.id]="tableId">
+        <tr>
+            <td>
+                Row 1
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <h2>Class and Style Binding</h2>
+    <p [class.hover]="isActive">This is a paragraph</p>
+    <h3 [style.color]="font">Hello</h3>
+    <br>
+</div>
