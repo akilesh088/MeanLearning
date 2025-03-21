@@ -1,0 +1,155 @@
+<!-- <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <label>Name:</label>
+    <input type="text" name="name" ngModel required>
+
+    <label>Email:</label>
+    <input type="email" name="email" ngModel required>
+    
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
+
+<p *ngIf="submitted">Form Submitted Name:{{userData.name}},Email:{{userData.email}}</p> -->
+
+
+
+<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+    <label>Name:</label>
+    <input type="text" formControlName="name"/>
+
+    <label>Email:</label>
+    <input type="text" formControlName="email"/>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p>Form Data:{{userForm.value | json}}</p> -->
+
+<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+    <label>Name:</label>
+    <input type="text" formControlName="name"/>
+    <small *ngIf="name?.invalid  && name?.touched">Name required</small>
+
+    
+    <div formArrayName="addresses">
+        <div *ngFor="let address of addresses.controls; let i=index">
+            <input type="text" [formControlName]="i" placeholder="Address{{i+1}}">
+        </div>
+    </div>
+    <button type="button" (click)="addAddress()" >Add</button>
+
+    <button type="submit"[disabled]="userForm.invalid">Submit</button>
+</form>
+<p>Form Data:{{userForm.value | json}}</p> -->
+
+<!-- <form [formGroup]="skillsForm">
+    <label>Skills:</label>
+    <div formArrayName="skills">
+      <div *ngFor="let skill of skills.controls; let i = index">
+        <input [formControlName]="i">
+        <button (click)="removeSkill(i)">Remove</button>
+      </div>
+    </div>
+    <button ()(click)="addSkill()">Add Skill</button>
+  </form>
+
+
+
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm) ">
+    <label for="'name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required minlength="3">
+    <div *ngIf="userFrom.controls.name?.invalid && userForm.control.name?.touched">
+
+    </div>
+  </form> -->
+
+
+  <!-- <div class="container">
+    <h2>Template Driven Form Validation</h2>
+  
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+       Name Field 
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" 
+          name="name" [(ngModel)]="user.name" #nameRef="ngModel" required minlength="3">
+        <div class="text-danger" *ngIf="nameRef.invalid && nameRef.touched">
+          <small *ngIf="nameRef.errors?.['required']">Name is required.</small>
+          <small *ngIf="nameRef.errors?.['minlength']">Name must be at least 3 characters.</small>
+        </div>
+      </div>
+  
+       Email Field 
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          class="form-control" 
+          name="email" 
+          [(ngModel)]="user.email" 
+          #emailRef="ngModel" 
+          required 
+          email>
+        <div class="text-danger" *ngIf="emailRef.invalid && emailRef.touched">
+          <small *ngIf="emailRef.errors?.['required']">Email is required.</small>
+          <small *ngIf="emailRef.errors?.['email']">Invalid email format.</small>
+        </div>
+      </div>
+  
+       Password Field 
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-control" 
+          name="password" 
+          [(ngModel)]="user.password" 
+          #passwordRef="ngModel" 
+          required 
+          minlength="6">
+        <div class="text-danger" *ngIf="passwordRef.invalid && passwordRef.touched">
+          <small *ngIf="passwordRef.errors?.['required']">Password is required.</small>
+          <small *ngIf="passwordRef.errors?.['minlength']">Password must be at least 6 characters.</small>
+        </div>
+      </div>
+  
+       Submit Button 
+      <button type="submit" class="btn btn-primary mt-3" [disabled]="userForm.invalid">
+        Submit
+      </button>
+    </form>
+  
+    <div *ngIf="submitted">
+      <h3>Form Submitted Successfully!</h3>
+      <pre>{{ user | json }}</pre>
+    </div>
+  </div> -->
+<!-- <div>
+  <form [formGroup]="userForm">
+    Email Field
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" class="form-control" formControlName="email">
+      
+      Validation Messages
+      <div *ngIf="emailControl?.errors?.['required'] && emailControl?.touched">
+        <small class="text-danger">Email is required.</small>
+      </div>
+      <div *ngIf="emailControl?.errors?.['email'] && emailControl?.touched">
+        <small class="text-danger">Invalid email format.</small>
+      </div>
+      <div *ngIf="emailControl?.errors?.['emailExists'] && emailControl?.touched">
+        <small class="text-danger">Email already exists.</small>
+      </div>
+    </div>
+
+    <button class="btn btn-primary mt-3" [disabled]="userForm.invalid">
+      Submit
+    </button>
+  </form>
+</div> -->
+
+<p>Component B: {{ message }}</p>
