@@ -1,0 +1,42 @@
+.spacer{
+    flex:1;
+}
+.custom-tab, .mat-tab-label {
+    color: #1976d2; /* Custom color for tab label */
+    font-weight: bold;
+  }
+  
+  .custom-tab, .mat-tab-label-active {
+    color: #d32f2f; /* Active tab label color */
+  }
+
+
+  .profile-avatar {
+    background-image: url('https://randomuser.me/api/portraits/men/32.jpg');
+    background-size: cover;
+  }
+
+  .horizontal-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .elevated-card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  }
+  
+  .outlined-card {
+    border: 5px solid black;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }

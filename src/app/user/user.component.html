@@ -1,0 +1,441 @@
+<!-- <h1>User Details!</h1>
+<p>User ID:{{userId}}</p>
+
+<div class="container">
+    <h2>Angular Material Demo</h2>
+
+    
+     <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter your Username">
+     </mat-form-field>
+
+     <button mat-raised-button color="dark">Submit</button>
+</div>
+<br>
+<br>
+<h2>Tool Bar</h2>
+<mat-toolbar color="dark">
+    <span>My Angular app</span>
+</mat-toolbar>
+
+
+<br>
+<br>
+<h2>Card</h2>
+<mat-card>
+    <mat-card-title>Welcome</mat-card-title>
+    <mat-card-content>Hello there</mat-card-content>
+</mat-card>
+
+
+<br>
+<br>
+<h2>Mat Dialog</h2>
+<h2 mat-dialog-title>Dialog box</h2>
+<mat-dialog-content>Welcome to Angular Material Dialog</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close >Close</button>
+</mat-dialog-actions>
+<br>
+<br>
+<h2>Icon</h2>
+<mat-icon>home</mat-icon>
+<mat-icon>facebook</mat-icon>
+<mat-icon>alarm</mat-icon>
+<mat-icon>shopping</mat-icon>
+<mat-icon>delete</mat-icon>
+<mat-icon>GitHubIcon</mat-icon>
+<br>
+<br>
+<h2>Flex Layout</h2>
+<br>
+<div fxLayout="row" fxLayoutGap="20px">
+    <mat-card fxFlex="50%">Card-1</mat-card>
+    <mat-card fxFlex="50%">Card-2</mat-card>
+</div>
+<br>
+<br>
+<h2>Dropdown Menu</h2>
+<button mat-button [matMenuTriggerFor]="basicMenu">OpenNow</button>
+
+<mat-menu #basicMenu="matMenu">
+    <button mat-menu-item (click)="onSelect('Option1')">Option 1</button>
+    <button mat-menu-item (click)="onSelect('Option2')">Option 2</button>
+    <button mat-menu-item (click)="onSelect('Option3')">Option 3</button>
+</mat-menu>
+
+<h2>Sub menu</h2>
+<button mat-button [matMenuTriggerFor]="mainMenu">Main Menu</button>
+
+<mat-menu #mainMenu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">Settings</button>
+  <button mat-menu-item>Profile</button>
+  <button mat-menu-item>Logout</button>
+</mat-menu>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Change Password</button>
+  <button mat-menu-item>Notifications</button>
+</mat-menu>
+
+<h2>DropDown with Icon</h2>
+<button mat-button [matMenuTriggerFor]="iconMenu">Menu with Icons</button>
+
+<mat-menu #iconMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>home</mat-icon> Home
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon> Settings
+  </button>
+  <button mat-menu-item>
+    <mat-icon>logout</mat-icon> Logout
+  </button>
+</mat-menu>
+
+<h2>DropDown with Disabled</h2>
+<button mat-button [matMenuTriggerFor]="disabledMenu">Menu with Disabled Items</button>
+
+<mat-menu #disabledMenu="matMenu">
+  <button mat-menu-item disabled>Disabled Option</button>
+  <button mat-menu-item>Enabled Option</button>
+</mat-menu>
+
+
+<h2>Dynamic Dropdown</h2>
+<button mat-button [matMenuTriggerFor]="dynamicMenu">Dynamic menu</button>
+<mat-menu #dynamicMenu="matMenu">
+    <button mat-menu-item *ngFor="let item of items" (click)="Onselect(item)">{{item}}</button>
+</mat-menu>
+
+<h2>Dropdown inside a ToolBar</h2>
+<mat-toolbar color="primary">
+    <span>My App</span>
+    <span class="spacer"></span>
+  
+    <button mat-button [matMenuTriggerFor]="profileMenu">Profile</button>
+  
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item>Account</button>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </mat-toolbar>
+
+
+
+  <button mat-button [matMenuTriggerFor]="positionedMenu">Positioned Menu</button>
+
+<mat-menu #positionedMenu="matMenu" xPosition="after" yPosition="above">
+  <button mat-menu-item>Top-Left</button>
+</mat-menu> -->
+
+
+<!-- <h2>Angular material tabs </h2>
+
+<mat-tab-group>
+    <mat-tab label="Home">
+        <p>Welcome to the Home Page</p>
+    </mat-tab>
+    <mat-tab label="Tools">
+        <p>Welcome to the Tool Page</p>
+    </mat-tab>
+    <mat-tab label="Settings">
+        <p>Welcome to the setting Page</p>
+    </mat-tab>
+</mat-tab-group>
+
+
+
+<h2>Dynamic Tabs Example</h2>
+
+<button mat-raised-button color="primary" (click)="addTab()">Add Tab</button>
+
+<mat-tab-group >
+  <mat-tab *ngFor="let tab of tabs; let i = index" [label]="tab.label">
+    <p>{{ tab.content }}</p>
+    <button mat-button color="warn" (click)="removeTab(i)">Remove Tab</button>
+  </mat-tab>
+</mat-tab-group>
+
+<h2>Lazy Loading Tabs Example</h2>
+
+<mat-tab-group>
+  <mat-tab label="Eager Tab">
+    <p>This content is loaded eagerly!</p>
+  </mat-tab>
+
+  <mat-tab label="Lazy Tab">
+    <ng-template matTabContent>
+      <p>This content is lazy-loaded!</p>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+
+<h2>Router Tabs Example</h2>
+
+<mat-tab-group>
+  <mat-tab label="Home">
+    <a mat-button routerLink="/home">Go to Home</a>
+  </mat-tab>
+  <mat-tab label="About">
+    <a mat-button routerLink="/about">Go to About</a>
+  </mat-tab>
+</mat-tab-group>
+
+<router-outlet></router-outlet>
+
+<mat-tab label="Disabled Tab" disabled>
+    <p>This tab is disabled!</p>
+  </mat-tab>
+  Swipe Navigation (for mobile):
+  
+  <mat-tab-group [disableRipple]="true">
+    <mat-tab label="No Ripple Effect">
+      <p>Ripple Effect is disabled.</p>
+    </mat-tab>
+  </mat-tab-group> -->
+  
+<!-- <h2>Cards in Angular</h2>
+
+  <mat-card style="background-color: aqua;">
+    <mat-card-title>Basic Card</mat-card-title>
+    <mat-card-content>
+      This is a simple Angular Material card.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="btn btn-primary text-dark">Action 1</button>
+      &nbsp;<button mat-button class="btn btn-primary text-dark">Action 2</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <img mat-card-image src="src/assest/landacape.jpeg" alt="Random image">
+    <mat-card-content>This is a landscape image</mat-card-content>  
+</mat-card>
+
+
+
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Card with Image</mat-card-title>
+      <mat-card-subtitle>Subtitle here</mat-card-subtitle>
+    </mat-card-header>
+  
+    <img mat-card-image src="https://picsum.photos/300/200" alt="Random Image">
+  
+    <mat-card-content>
+      This card has an image and additional information.
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button mat-raised-button color="primary">View</button>
+      <button mat-button color="accent">Share</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card style="background-color: aquamarine;">
+    <mat-card-header>
+      <div mat-card-avatar class="profile-avatar"></div>
+      <mat-card-title>John Doe</mat-card-title>
+      <mat-card-subtitle>Software Engineer</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content>
+      John is an Angular developer with 5+ years of experience.
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button mat-button color="primary">Connect</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card style="background-color: aqua;">
+    <mat-card-header>
+      <mat-card-title>Article Title</mat-card-title>
+      <mat-card-subtitle>By Jane Doe</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content>
+      This is a brief summary of the article. Click below to read more.
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button mat-stroked-button color="accent">Read More</button>
+    </mat-card-actions>
+  
+    <mat-card-footer>
+      <small>Published: August 2023</small>
+    </mat-card-footer>
+  </mat-card>
+
+  <mat-card class="horizontal-card" style="background-color: aquamarine;">
+    <img mat-card-image src="https://picsum.photos/150/150" alt="Thumbnail">
+    <mat-card-content>
+      <h3>Horizontal Card</h3>
+      <p>This card arranges content in a horizontal layout.</p>
+      <button mat-button>Learn More</button>
+    </mat-card-content>
+  </mat-card>
+  <div *ngFor="let product of products">
+    <mat-card>
+      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-content>{{ product.description }}</mat-card-content>
+      <mat-card-footer>
+        <strong>{{ product.price }}</strong>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+
+
+  <div class="card-container">
+    <mat-card *ngFor="let product of products" style="background-color: blueviolet;">
+      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-content>{{ product.description }}</mat-card-content>
+    </mat-card>
+  </div>
+  
+
+  <mat-card class="elevated-card" style="background-color: blueviolet; color: white;" >Elevated Card</mat-card> <br />
+<mat-card class="outlined-card" style="background-color: brown; color: white;">Outlined Card</mat-card> -->
+
+<!-- 
+<h2>Linear Stepper Example</h2>
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="personalForm">
+    <form [formGroup]="personalForm">
+      <h3>Step 1: Personal Info</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required />
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperNext [disabled]="personalForm.invalid">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="addressForm">
+    <form [formGroup]="addressForm">
+      <h3>Step 2: Address Info</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>ZIP Code</mat-label>
+        <input matInput formControlName="zip" required />
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="onSubmit()" [disabled]="addressForm.invalid">Submit</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
+
+
+<h2>Non-Linear Stepper Example</h2>
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step label="Step 1: Info">
+    <p>Fill in any information and navigate freely.</p>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+
+  <mat-step label="Step 2: Confirmation">
+    <p>You can go back anytime.</p>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button (click)="onSubmit()">Submit</button>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-step label="Step 1: Info">
+      <p>Fill in any information and navigate freely.</p>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+  
+    <mat-step label="Step 2: Confirmation">
+      <p>You can go back anytime.</p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="onSubmit()">Submit</button>
+    </mat-step>
+  </mat-vertical-stepper>
+
+
+  <h2>Custom Step Control Example</h2>
+
+<mat-horizontal-stepper #stepper>
+  <mat-step label="Step 1">
+    <p>First step content.</p>
+    <button mat-button (click)="stepper.next()">Next</button>
+  </mat-step>
+
+  <mat-step label="Step 2">
+    <p>Second step content.</p>
+    <button mat-button (click)="stepper.next()">Next</button>
+    <button mat-button (click)="onSubmit()">Submit</button>
+  </mat-step>
+  <mat-step label="Step 3">
+    <p>Second step content.</p>
+    <button mat-button>Back</button>
+    <button mat-button>Submit</button>
+  </mat-step>
+</mat-horizontal-stepper> -->
+
+
+<h2>Basic Angular Material Data Table</h2>
+
+<table mat-table  [dataSource]="users" class="mat-elevation-z8" >
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let user"> {{ user.id }} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let user"> {{ user.name }} </td>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let user"> {{ user.email }} </td>
+  </ng-container>
+
+  <!-- Role Column -->
+  <ng-container matColumnDef="role">
+    <th mat-header-cell *matHeaderCellDef> Role </th>
+    <td mat-cell *matCellDef="let user"> {{ user.role }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<input matInput placeholder="Filter Users" (keyup)="applyFilter($event)">
+
+
+<h2 mat-dialog-title>Hello, {{ data.name }}!</h2>
+<mat-dialog-content>Message: {{ data.message }}</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+
